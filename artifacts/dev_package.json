@@ -1,0 +1,46 @@
+{
+	"id": "908CE86A-FF12-ED11-BD6E-000D3AB1D9FF",
+	"createdAt": "2022-08-03T07:39:34.800Z",
+	"createdBy": "kristin.eliassen@neptune-software.com",
+	"git": {
+		"targetServers": [],
+		"remote": "https://github.com/neptune-software-marketplace/neptunesoftware-dxp-abb-integratedpayment"
+	},
+	"name": "neptunesoftware-dxp-abb-integratedpayment",
+	"description": null,
+	"ver": "22.8.3.740",
+	"enableCICD": true,
+	"apps": [
+		{
+			"id": "593F1B43-41BA-EB11-A7AC-A085FCBC9F85",
+			"ver": "22.8.3.939",
+			"application": "paymentrequestdemo",
+			"title": "Payment Request",
+			"description": ""
+		}
+	],
+	"api": [],
+	"odataMock": [],
+	"odataSource": [],
+	"dictionary": [],
+	"jsclass": [],
+	"jsscript_group": [],
+	"theme": [],
+	"pdf": [],
+	"rulesengine": [],
+	"reports": [],
+	"api_authentication": [],
+	"api_group": [],
+	"tile": [],
+	"category": [],
+	"launchpad": [],
+	"certificates": [],
+	"role": [],
+	"systems": [],
+	"doc": [],
+	"wf_notifications": [],
+	"wf_definition": [],
+	"department": [],
+	"script_scheduler": [],
+	"connector": []
+}

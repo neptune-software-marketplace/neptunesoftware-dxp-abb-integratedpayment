@@ -1,0 +1,1245 @@
+{
+	"id": "593f1b43-41ba-eb11-a7ac-a085fcbc9f85",
+	"createdAt": "2022-02-04T15:53:01.643Z",
+	"updatedAt": "2022-08-03T07:39:45.713Z",
+	"createdBy": "luuk.wosten@neptune-software.com",
+	"changedBy": "kristin.eliassen@neptune-software.com",
+	"objects": [
+		{
+			"fieldNo": "1baa6da8-7cfc-4ebc-fb3c-06db0627297e",
+			"fieldName": "oShell",
+			"fieldParent": 0,
+			"fieldType": "sap.m.Shell",
+			"script": "",
+			"request": [],
+			"response": [],
+			"attributes": [],
+			"data": [
+				{
+					"fieldNo": "92eab942-9032-4497-c0b6-8c7db19cc3ae",
+					"fieldName": "oApp",
+					"fieldParent": "1baa6da8-7cfc-4ebc-fb3c-06db0627297e",
+					"fieldType": "sap.m.App",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "79684721-969a-4835-b9d5-6000b67b06db",
+							"fieldName": "oPage",
+							"fieldParent": "92eab942-9032-4497-c0b6-8c7db19cc3ae",
+							"fieldType": "sap.m.Page",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Payment Request Demo",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "3c80a352-9e18-41ae-ef92-f7a077d717e5",
+									"fieldName": "oBarCustomHeader",
+									"fieldParent": "79684721-969a-4835-b9d5-6000b67b06db",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setCustomHeader",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "dad848d8-f13f-46ad-c09c-cf64df3e66fc",
+											"fieldName": "Middle",
+											"fieldParent": "3c80a352-9e18-41ae-ef92-f7a077d717e5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "5c20e515-c420-40ed-c1c0-aea416bcea6b",
+													"fieldName": "oTitle",
+													"fieldParent": "dad848d8-f13f-46ad-c09c-cf64df3e66fc",
+													"fieldType": "sap.m.Title",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Payment Request Demo",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "d7446fdc-ecee-4222-e237-0bd52a8e6b07",
+											"fieldName": "Right",
+											"fieldParent": "3c80a352-9e18-41ae-ef92-f7a077d717e5",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "cbb86658-82a6-4ca5-ee32-dfd31601f753",
+													"fieldName": "oButtonAdd",
+													"fieldParent": "d7446fdc-ecee-4222-e237-0bd52a8e6b07",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Emphasized",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://add",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "oDialogProducts.open();",
+															"script": "oDialogProducts.open();",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								},
+								{
+									"fieldNo": "87f9b39c-780d-4d7a-9dd2-348b733887b4",
+									"fieldName": "oListProducts",
+									"fieldParent": "79684721-969a-4835-b9d5-6000b67b06db",
+									"fieldType": "sap.m.List",
+									"script": "",
+									"bindingValue": "Generic Array",
+									"bindingType": "h",
+									"bindingSource": "P9",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "noDataText",
+											"grouping": "Properties",
+											"value": "No Items in Cart",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "mode",
+											"grouping": "Properties",
+											"value": "Delete",
+											"script": "",
+											"translation": []
+										},
+										{
+											"attribute": "delete",
+											"grouping": "Events",
+											"value": "Anonymous Function",
+											"script": [
+												"==OBJECT STRING==",
+												"var deleteItem = oEvent.getParameter(\"listItem\");\r",
+												"var context = deleteItem.getBindingContext();\r",
+												"var value = context.getProperty(\"product\");\r",
+												"\r",
+												"var newProdInCart = JSON.parse(JSON.stringify(modeloListProducts.oData.filter(\r",
+												"    function (obj) {\r",
+												"        return obj.product !== value;\r",
+												"    })));\r",
+												"\r",
+												"modeloListProducts.setData(newProdInCart);\r",
+												"modeloListProducts.refresh();"
+											],
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "e48e0552-2a91-4ca5-836e-ee2f8550b3ac",
+											"fieldName": "oObjectListItem",
+											"fieldParent": "87f9b39c-780d-4d7a-9dd2-348b733887b4",
+											"fieldType": "sap.m.ObjectListItem",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "title",
+													"grouping": "Properties",
+													"value": "{product}",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "numberUnit",
+													"grouping": "Properties",
+													"value": "USD",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "numberState",
+													"grouping": "Properties",
+													"value": "Success",
+													"script": "",
+													"translation": []
+												},
+												{
+													"attribute": "number",
+													"grouping": "Properties",
+													"value": "{price}",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										}
+									]
+								},
+								{
+									"fieldNo": "eebcfac0-55a2-4fbc-9143-566b8bfa331d",
+									"fieldName": "oBarFooter",
+									"fieldParent": "79684721-969a-4835-b9d5-6000b67b06db",
+									"fieldType": "sap.m.Bar",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "position",
+											"grouping": "Parent",
+											"value": "setFooter",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "a2a97c21-64e3-4812-b973-06e6d301d55b",
+											"fieldName": "Middle",
+											"fieldParent": "eebcfac0-55a2-4fbc-9143-566b8bfa331d",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentMiddle",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "a180c9db-5c6f-4d5e-aef5-7281e541ae16",
+											"fieldName": "Right",
+											"fieldParent": "eebcfac0-55a2-4fbc-9143-566b8bfa331d",
+											"fieldType": "neptune.BarContent",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "position",
+													"grouping": "Parent",
+													"value": "ContentRight",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "ce4a92a0-827f-447d-fb21-94751202eb8a",
+													"fieldName": "oButtonApplePay",
+													"fieldParent": "a180c9db-5c6f-4d5e-aef5-7281e541ae16",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "apple-pay-button",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "738d1a8e-ee35-4b4f-dd0a-2bae8bf1fc76",
+													"fieldName": "oTextErrorMessage",
+													"fieldParent": "a180c9db-5c6f-4d5e-aef5-7281e541ae16",
+													"fieldType": "sap.m.Text",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [],
+													"data": []
+												},
+												{
+													"fieldNo": "f7d28eef-ba3e-4d31-b846-9bb2bd8effd1",
+													"fieldName": "oButtonPay",
+													"fieldParent": "a180c9db-5c6f-4d5e-aef5-7281e541ae16",
+													"fieldType": "sap.m.Button",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "type",
+															"grouping": "Properties",
+															"value": "Accept",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "Pay now",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "icon",
+															"grouping": "Properties",
+															"value": "sap-icon://simple-payment",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"if (modeloListProducts.oData.length === 0) {\r",
+																"    sap.m.MessageToast.show(\"Please add items to cart for checkout !\");\r",
+																"    return;\r",
+																"}\r",
+																"createPaymentRequest()\r",
+																"    .show()\r",
+																"    .then(function (paymentResponse) {\r",
+																"        // Here we would process the payment. For this demo, simulate immediate success:\r",
+																"        paymentResponse.complete('success');\r",
+																"        sap.m.MessageToast.show(\"Payment successful !\");        \r",
+																"    }).catch(function (err) {\r",
+																"        // For demo purposes:\r",
+																"        sap.m.MessageToast.show(\"Payment failed : \" + err.name + \"-\" + err.message + \"!\");\r",
+																"    });"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												},
+												{
+													"fieldNo": "5c98df75-78f5-4a56-a859-26174c53c417",
+													"fieldName": "oButtonGooglePay",
+													"fieldParent": "a180c9db-5c6f-4d5e-aef5-7281e541ae16",
+													"fieldType": "sap.ui.core.Icon",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "visible",
+															"grouping": "Properties",
+															"value": "false",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "styleClass",
+															"grouping": "Properties",
+															"value": "gpay-button black plain short",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "press",
+															"grouping": "Events",
+															"value": "Anonymous Function",
+															"script": [
+																"==OBJECT STRING==",
+																"if (modeloListProducts.oData.length === 0) {\r",
+																"    sap.m.MessageToast.show(\"Please add items to cart for checkout !\");\r",
+																"    return;\r",
+																"}\r",
+																"createGooglePaymentRequest()\r",
+																"    .show()\r",
+																"    .then(function (response) {\r",
+																"        // Dismiss payment dialog.\r",
+																"        response.complete('success');\r",
+																"        sap.m.MessageToast.show(\"Payment successful !\");\r",
+																"    })\r",
+																"    .catch(function (err) {\r",
+																"        sap.m.MessageToast.show(\"Payment failed : \" + err.name + \"-\" + err.message + \"!\");\r",
+																"    });"
+															],
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99999,
+			"data": [
+				{
+					"fieldNo": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+					"fieldName": "Scripts",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "cc9009c9-2314-4fc8-aafc-87161777b135",
+							"fieldName": "ApplePayLogic",
+							"fieldParent": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function startApplePay() {",
+								"    setTimeout(function() {",
+								"        var applePayUiController = (function () {",
+								"        var DOMStrings = {",
+								"            appleButton: oButtonApplePay.getDomRef(),",
+								"            errorMessage: oTextErrorMessage.getDomRef()",
+								"        }",
+								"        return {",
+								"            DOMStrings,",
+								"            displayApplePayButton: function () {",
+								"            DOMStrings.appleButton.style.display = 'block'",
+								"            },",
+								"            hideApplePayButton: function () {",
+								"            DOMStrings.appleButton.style.display = 'none'",
+								"            },",
+								"            displayErrorMessage: function () {",
+								"            DOMStrings.errorMessage.style.display = 'block'",
+								"            }",
+								"        }",
+								"        })()",
+								"",
+								"        var applePayController = (function (uiController) {",
+								"        var BACKEND_URL_VALIDATE_SESSION = 'https://{yourServer}/validateSession'",
+								"        var BACKEND_URL_PAY = 'https://{yourServer}/pay'",
+								"",
+								"        // High level configuration options.",
+								"        var config = {",
+								"            payments: {",
+								"            acceptedCardSchemes: ['amex', 'masterCard', 'maestro', 'visa', 'mada']",
+								"            },",
+								"            shop: {",
+								"            product_price: 10.0,",
+								"            shop_name: 'Demo Shop',",
+								"            shop_localisation: {",
+								"                currencyCode: 'GBP',",
+								"                countryCode: 'GB'",
+								"            }",
+								"            },",
+								"            shipping: {",
+								"            GB_region: [",
+								"                {",
+								"                label: 'Free Shipping',",
+								"                amount: '0.00',",
+								"                detail: 'Arrives in 3-5 days',",
+								"                identifier: 'freeShipping'",
+								"                },",
+								"                {",
+								"                label: 'Express Shipping',",
+								"                amount: '5.00',",
+								"                detail: 'Arrives in 1-2 days',",
+								"                identifier: 'expressShipping'",
+								"                }",
+								"            ],",
+								"            WORLDWIDE_region: [",
+								"                {",
+								"                label: 'Worldwide Standard Shipping',",
+								"                amount: '10.00',",
+								"                detail: 'Arrives in 5-8 days',",
+								"                identifier: 'worldwideShipping'",
+								"                }",
+								"            ]",
+								"            }",
+								"        }",
+								"        /**",
+								"         * Checks if Apple Pay is possible in the current environment.",
+								"         * @return {boolean} Boolean to check if Apple Pay is possible",
+								"         */",
+								"        var _applePayAvailable = function () {",
+								"            return window.ApplePaySession && ApplePaySession.canMakePayments()",
+								"        }",
+								"",
+								"        /**",
+								"         * Starts the Apple Pay session using a configuration",
+								"         */",
+								"        var _startApplePaySession = function (config) {",
+								"            var applePaySession = new ApplePaySession(6, config)",
+								"            _handleApplePayEvents(applePaySession)",
+								"            applePaySession.begin()",
+								"        }",
+								"",
+								"        /**",
+								"         * This is the main method of the script, since here we handle all the Apple Pay",
+								"         * events. Here you are able to populate your shipping methods, react to  shipping methods",
+								"         * changes, and many other interaction that the user has with the Apple Pay pup-up.",
+								"         *",
+								"         * @param {object} Apple Pay Session (the one generate on the button click)",
+								"         *",
+								"         */",
+								"        var _handleApplePayEvents = function (appleSession) {",
+								"            // apple events",
+								"        }",
+								"",
+								"        /**",
+								"         * Sets a onClick listen on the Apple Pay button. When clicked it will",
+								"         * begin the Apple Pay session with your configuration",
+								"         */",
+								"        var _setButtonClickListener = function () {",
+								"            oButtonApplePay.getDomRef()",
+								"            .addEventListener('click', function () {",
+								"                _startApplePaySession({",
+								"                currencyCode: config.shop.shop_localisation.currencyCode,",
+								"                countryCode: config.shop.shop_localisation.countryCode,",
+								"                merchantCapabilities: [",
+								"                    'supports3DS',",
+								"                    'supportsEMV',",
+								"                    'supportsCredit',",
+								"                    'supportsDebit'",
+								"                ],",
+								"                supportedNetworks: config.payments.acceptedCardSchemes,",
+								"                shippingType: 'shipping',",
+								"                requiredBillingContactFields: [",
+								"                    'postalAddress',",
+								"                    'name',",
+								"                    'phone',",
+								"                    'email'",
+								"                ],",
+								"                requiredShippingContactFields: [",
+								"                    'postalAddress',",
+								"                    'name',",
+								"                    'phone',",
+								"                    'email'",
+								"                ],",
+								"                total: {",
+								"                    label: config.shop.shop_name,",
+								"                    amount: config.shop.product_price,",
+								"                    type: 'final'",
+								"                }",
+								"                })",
+								"            })",
+								"        }",
+								"",
+								"        return {",
+								"            init: function () {",
+								"            // If Apple Pay is available show the button otherwise show the error",
+								"            if (_applePayAvailable()) {",
+								"                // Notice we are using the functions from our UI controller",
+								"                uiController.displayApplePayButton()",
+								"            } else {",
+								"                uiController.hideApplePayButton()",
+								"                uiController.displayErrorMessage()",
+								"            }",
+								"",
+								"            // Set the onClick listener on the Apple Pay button",
+								"            _setButtonClickListener()",
+								"            }",
+								"        }",
+								"        })(applePayUiController) // passing the UI controller",
+								"",
+								"        // Initialise the Apple Pay controller and let the magic happen",
+								"        applePayController.init()",
+								"    }, 1);",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "524cca1b-529a-424e-9ed8-3b8b4bda44f1",
+							"fieldName": "oPayButton",
+							"fieldParent": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+							"fieldType": "sap.ui.core.HTML",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": [
+								{
+									"fieldNo": "c3fdd7f1-53f4-4584-a9cd-fd799c239903",
+									"fieldName": "oPayAppleButtonCSS",
+									"fieldParent": "524cca1b-529a-424e-9ed8-3b8b4bda44f1",
+									"fieldType": "neptune.Html",
+									"script": [
+										"==OBJECT STRING==",
+										"<style type=\"text/css\" media=\"all\">",
+										"",
+										"    .apple-pay-button {",
+										"        width: 250px;",
+										"        height: 40px;",
+										"        display: inline-block;",
+										"        -webkit-appearance: -apple-pay-button;",
+										"        cursor: pointer;",
+										"    }",
+										"",
+										"",
+										".sapMIBar-CTX .sapMBtn:not(.sapMBtnDisabled):hover>.sapMBtnInner:not(.sapMToggleBtnPressed):not(.sapMBtnEmphasized):not(.sapMBtnAccept):not(.sapMBtnReject):not(.sapMBtnActive):not(.sapMBtnGhost), .sapMTB-Transparent-CTX .sapMBtn:not(.sapMBtnDisabled):hover>.sapMBtnInner:not(.sapMToggleBtnPressed):not(.sapMBtnEmphasized):not(.sapMBtnAccept):not(.sapMBtnReject):not(.sapMBtnActive):not(.sapMBtnGhost) {",
+										"    border-color: #FF000000;",
+										"}",
+										".sapMIBar-CTX .sapMBtn:hover>.sapMBtnHoverable:not(.sapMBtnActive) {",
+										"    border-color: transparent;",
+										"}",
+										".sapMIBar-CTX .sapMBtn:hover>.sapMBtnHoverable:not(.sapMBtnActive) {",
+										"    background-color: #FF000000;",
+										"    color: #FF000000;;",
+										"}",
+										".sapMBtn:hover>.sapMBtnHoverable {",
+										"    background-color: ##FF000000;;",
+										"    border-color: #FF000000;;",
+										"}",
+										".sapMIBar-CTX.sapMFooter-CTX :not(.sapMBtnDisabled)>.sapMBtnActive {",
+										"    background-color: #FF000000;",
+										"    color: #FF000000;",
+										"    text-shadow: none;",
+										"}",
+										"",
+										"</style>"
+									],
+									"request": [],
+									"response": [],
+									"attributes": [],
+									"data": []
+								}
+							]
+						},
+						{
+							"fieldNo": "08ff09a4-9394-4ef1-c850-534550b395a8",
+							"fieldName": "GooglePayFunctions",
+							"fieldParent": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"const allowedCardNetworks = [\"AMEX\", \"DISCOVER\", \"INTERAC\", \"JCB\", \"MASTERCARD\", \"VISA\"];\r",
+								"const allowedCardAuthMethods = [\"PAN_ONLY\", \"CRYPTOGRAM_3DS\"];\r",
+								"\r",
+								"/**\r",
+								" * Define your unique Google Pay API configuration\r",
+								" *\r",
+								" * @returns {object} data attribute suitable for PaymentMethodData\r",
+								" */\r",
+								"function getGooglePaymentsConfiguration() {\r",
+								"    return {\r",
+								"        environment: 'TEST',\r",
+								"        apiVersion: 2,\r",
+								"        apiVersionMinor: 0,\r",
+								"        merchantInfo: {\r",
+								"            // A merchant ID is available after approval by Google.\r",
+								"            // 'merchantId':'12345678901234567890',\r",
+								"            merchantName: 'Example Merchant'\r",
+								"        },\r",
+								"        allowedPaymentMethods: [{\r",
+								"            type: 'CARD',\r",
+								"            parameters: {\r",
+								"                allowedAuthMethods: allowedCardAuthMethods,\r",
+								"                allowedCardNetworks: allowedCardNetworks\r",
+								"            },\r",
+								"            tokenizationSpecification: {\r",
+								"                type: 'PAYMENT_GATEWAY',\r",
+								"                // Check with your payment gateway on the parameters to pass.\r",
+								"                // @see {@link https://developers.google.com/pay/api/web/reference/request-objects#gateway}\r",
+								"                parameters: {\r",
+								"                    'gateway': 'example',\r",
+								"                    'gatewayMerchantId': 'exampleGatewayMerchantId'\r",
+								"                }\r",
+								"            }\r",
+								"        }]\r",
+								"    };\r",
+								"}\r",
+								"\r",
+								"/**\r",
+								" * Create a PaymentRequest\r",
+								" *\r",
+								" * @returns {PaymentRequest}\r",
+								" */\r",
+								"function createGooglePaymentRequest() {\r",
+								"    // Add support for the Google Pay API.\r",
+								"    const methodData = [{\r",
+								"        supportedMethods: 'https://google.com/pay',\r",
+								"        data: getGooglePaymentsConfiguration()\r",
+								"    }];\r",
+								"    // Add other supported payment methods.\r",
+								"    methodData.push({\r",
+								"        supportedMethods: 'basic-card',\r",
+								"        data: {\r",
+								"            supportedNetworks:\r",
+								"                Array.from(allowedCardNetworks, (network) => network.toLowerCase())\r",
+								"        }\r",
+								"    });\r",
+								"\r",
+								"    // const details = {\r",
+								"    //     total: { label: 'Test Purchase', amount: { currency: 'USD', value: '1.00' } }\r",
+								"    // };\r",
+								"\r",
+								"    const details = buildShoppingCartDetails();\r",
+								"\r",
+								"    const options = {\r",
+								"        requestPayerEmail: true,\r",
+								"        requestPayerName: true\r",
+								"    };\r",
+								"\r",
+								"    return new PaymentRequest(methodData, details, options);\r",
+								"}\r",
+								"\r",
+								"\r",
+								"function canGooglePay() {\r",
+								"    const request = createGooglePaymentRequest();\r",
+								"    if (window.PaymentRequest) {\r",
+								"        request.canMakePayment()\r",
+								"            .then(function (result) {\r",
+								"                if (result) {\r",
+								"                    // Display PaymentRequest dialog on interaction with the existing checkout button\r",
+								"                    oButtonGooglePay.setVisible(true);\r",
+								"                    oButtonPay.setVisible(true);\r",
+								"                }\r",
+								"            })\r",
+								"            .catch(function (err) {\r",
+								"                sap.m.MessageToast.show(\r",
+								"                    'Google Pay canMakePayment() error! ' + err.name + ' error: ' + err.message);\r",
+								"            });\r",
+								"    } else {\r",
+								"        sap.m.MessageToast.show('PaymentRequest API not available.');\r",
+								"    }\r",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "06e66513-607e-4642-aa97-dec49d728f63",
+							"fieldName": "PayFunctions",
+							"fieldParent": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"function buildSupportedPaymentMethodData() {\r",
+								"    // Example supported payment methods:\r",
+								"    return [{\r",
+								"        supportedMethods: 'basic-card',\r",
+								"        data: {\r",
+								"            supportedNetworks: ['visa', 'mastercard'],\r",
+								"            supportedTypes: ['debit', 'credit']\r",
+								"        }\r",
+								"    }];\r",
+								"}\r",
+								"\r",
+								"function createPaymentRequest() {\r",
+								"    return new PaymentRequest(buildSupportedPaymentMethodData(),\r",
+								"        buildShoppingCartDetails());\r",
+								"}\r",
+								"\r",
+								"function buildShoppingCartDetails() {\r",
+								"    var cartItem;\r",
+								"    var cartItems = [];\r",
+								"    var cartTotalAmt = 0;\r",
+								"\r",
+								"\r",
+								"    $.each(modeloListProducts.oData, function (i, row) {\r",
+								"        cartItem = {};\r",
+								"        cartItem.label = row.product;\r",
+								"        cartItem.amount = { currency: 'USD', value: row.price };\r",
+								"        cartItems.push(cartItem);\r",
+								"        cartTotalAmt += row.price;\r",
+								"    })\r",
+								"\r",
+								"    var cartTotal = {\r",
+								"        label: 'Total',\r",
+								"        amount: { currency: 'USD', value: parseFloat(cartTotalAmt).toFixed(2) }\r",
+								"    }\r",
+								"\r",
+								"    return {\r",
+								"        id: 'order-123',\r",
+								"        displayItems: cartItems,\r",
+								"        total: cartTotal\r",
+								"    };\r",
+								"}\r",
+								"\r",
+								"\r",
+								"function canPay() {\r",
+								"    const request = createPaymentRequest();\r",
+								"    if (window.PaymentRequest) {\r",
+								"        request.canMakePayment()\r",
+								"            .then(function (result) {\r",
+								"                if (result) {\r",
+								"                    // Display PaymentRequest dialog on interaction with the existing checkout button\r",
+								"                    oButtonPay.setVisible(true);\r",
+								"                }\r",
+								"            })\r",
+								"            .catch(function (err) {\r",
+								"                sap.m.MessageToast.show(\r",
+								"                    'canMakePayment() error! ' + err.name + ' error: ' + err.message);\r",
+								"            });\r",
+								"    } else {\r",
+								"        sap.m.MessageToast.show('PaymentRequest API not available.');\r",
+								"    }\r",
+								"}"
+							],
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						},
+						{
+							"fieldNo": "8cc310e8-1cbb-410a-c5b8-988de973892f",
+							"fieldName": "init",
+							"fieldParent": "c4cdea42-0fc6-4e93-9713-e7d2ed171765",
+							"fieldType": "neptune.Script",
+							"script": [
+								"==OBJECT STRING==",
+								"var productList =\r",
+								"    [\r",
+								"        { \"product\": null, \"price\": null },\r",
+								"        { \"product\": \"Milk\", \"price\": 1.99 },\r",
+								"        { \"product\": \"Eggs\", \"price\": 5.49 },\r",
+								"        { \"product\": \"Bread\", \"price\": 1.69 },\r",
+								"        { \"product\": \"Chocolate\", \"price\": 8.99 },\r",
+								"        { \"product\": \"Wine\", \"price\": 18.99 }\r",
+								"    ];\r",
+								"\r",
+								"\r",
+								"sap.ui.getCore().attachInit(function () {\r",
+								"\r",
+								"    setTimeout(function () {\r",
+								"        modeloSelectProducts.setData(productList);\r",
+								"        modeloSelectProducts.refresh(true);\r",
+								"        modeloListProducts.setData([]);\r",
+								"        modeloListProducts.refresh();\r",
+								"        canGooglePay();\r",
+								"        canPay();\r",
+								"\r",
+								"        startApplePay();\r",
+								"    }, 200);\r",
+								"\r",
+								"});"
+							],
+							"filePath": "init",
+							"request": [],
+							"response": [],
+							"attributes": [],
+							"data": []
+						}
+					]
+				},
+				{
+					"fieldNo": "b7893c4b-b503-4ba7-f411-47f740d0d5ef",
+					"fieldName": "Dialogs",
+					"fieldParent": 99999,
+					"fieldType": "neptune.folder",
+					"script": "",
+					"request": [],
+					"response": [],
+					"attributes": [],
+					"data": [
+						{
+							"fieldNo": "9d9aafe5-5587-406e-a21c-e6f8273df016",
+							"fieldName": "oButtonAddProduct",
+							"fieldParent": "b7893c4b-b503-4ba7-f411-47f740d0d5ef",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Accept",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://add",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "Anonymous Function",
+									"script": [
+										"==OBJECT STRING==",
+										"if (!oSelectProducts.getSelectedKey()) {\r",
+										"    sap.m.MessageToast.show(\"Please select an item to add to cart !\");\r",
+										"    return;\r",
+										"}\r",
+										"if (modeloListProducts.oData.length === 0) {\r",
+										"    modeloListProducts.setData(\r",
+										"        [{\r",
+										"            \"product\": oSelectProducts.getSelectedItem().getText(),\r",
+										"            \"price\": parseFloat(oSelectProducts.getSelectedKey())\r",
+										"        }]\r",
+										"    );\r",
+										"} else {\r",
+										"    var prodInCart = JSON.parse(JSON.stringify(modeloListProducts.oData));\r",
+										"    prodInCart.push({\r",
+										"        \"product\": oSelectProducts.getSelectedItem().getText(),\r",
+										"        \"price\": parseFloat(oSelectProducts.getSelectedKey())\r",
+										"    });\r",
+										"\r",
+										"    modeloListProducts.setData(prodInCart);\r",
+										"}\r",
+										"\r",
+										"modeloListProducts.refresh();\r",
+										"oDialogProducts.close();"
+									],
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "ddc81ea8-0ce8-4ad4-9cc5-e93274f5aa01",
+							"fieldName": "oButtonCancel",
+							"fieldParent": "b7893c4b-b503-4ba7-f411-47f740d0d5ef",
+							"fieldType": "sap.m.Button",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "type",
+									"grouping": "Properties",
+									"value": "Reject",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://sys-cancel",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "press",
+									"grouping": "Events",
+									"value": "oDialogProducts.close();",
+									"script": "oDialogProducts.close();",
+									"translation": []
+								}
+							],
+							"data": []
+						},
+						{
+							"fieldNo": "1507fac1-2483-412d-da83-9c344baef3a8",
+							"fieldName": "oDialogProducts",
+							"fieldParent": "b7893c4b-b503-4ba7-f411-47f740d0d5ef",
+							"fieldType": "sap.m.Dialog",
+							"script": "",
+							"request": [],
+							"response": [],
+							"attributes": [
+								{
+									"attribute": "title",
+									"grouping": "Properties",
+									"value": "Add Product",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "icon",
+									"grouping": "Properties",
+									"value": "sap-icon://add-product",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "endButton",
+									"grouping": "Associations",
+									"value": "oButtonAddProduct",
+									"script": "",
+									"translation": []
+								},
+								{
+									"attribute": "beginButton",
+									"grouping": "Associations",
+									"value": "oButtonCancel",
+									"script": "",
+									"translation": []
+								}
+							],
+							"data": [
+								{
+									"fieldNo": "ecbb25cb-29c6-40d5-8af2-69e0f6e6d1b2",
+									"fieldName": "oSimpleForm",
+									"fieldParent": "1507fac1-2483-412d-da83-9c344baef3a8",
+									"fieldType": "sap.ui.layout.form.SimpleForm",
+									"script": "",
+									"request": [],
+									"response": [],
+									"attributes": [
+										{
+											"attribute": "editable",
+											"grouping": "Properties",
+											"value": "true",
+											"script": "",
+											"translation": []
+										}
+									],
+									"data": [
+										{
+											"fieldNo": "df94ee0e-079d-4bbf-e826-abb7e407ca95",
+											"fieldName": "oLabel1",
+											"fieldParent": "ecbb25cb-29c6-40d5-8af2-69e0f6e6d1b2",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Product",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "17d87e7d-708b-4099-fc03-f1aef5fe9743",
+											"fieldName": "oSelectProducts",
+											"fieldParent": "ecbb25cb-29c6-40d5-8af2-69e0f6e6d1b2",
+											"fieldType": "sap.m.Select",
+											"script": "",
+											"bindingValue": "Generic Array",
+											"bindingType": "h",
+											"bindingSource": "P9",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "change",
+													"grouping": "Events",
+													"value": "oTextPrice.setText(oSelectProducts.getSelectedKey());",
+													"script": "oTextPrice.setText(oSelectProducts.getSelectedKey());",
+													"translation": []
+												}
+											],
+											"data": [
+												{
+													"fieldNo": "0f828e8a-4a9c-41be-9649-a563a10b4481",
+													"fieldName": "oListItem",
+													"fieldParent": "17d87e7d-708b-4099-fc03-f1aef5fe9743",
+													"fieldType": "sap.ui.core.ListItem",
+													"script": "",
+													"request": [],
+													"response": [],
+													"attributes": [
+														{
+															"attribute": "text",
+															"grouping": "Properties",
+															"value": "{product}",
+															"script": "",
+															"translation": []
+														},
+														{
+															"attribute": "key",
+															"grouping": "Properties",
+															"value": "{price}",
+															"script": "",
+															"translation": []
+														}
+													],
+													"data": []
+												}
+											]
+										},
+										{
+											"fieldNo": "a6b2509f-3694-46d4-9872-6e51b6d2b2ee",
+											"fieldName": "oLabel",
+											"fieldParent": "ecbb25cb-29c6-40d5-8af2-69e0f6e6d1b2",
+											"fieldType": "sap.m.Label",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [
+												{
+													"attribute": "text",
+													"grouping": "Properties",
+													"value": "Price",
+													"script": "",
+													"translation": []
+												}
+											],
+											"data": []
+										},
+										{
+											"fieldNo": "676fa289-5d37-48c2-d57b-aa64575e42d1",
+											"fieldName": "oTextPrice",
+											"fieldParent": "ecbb25cb-29c6-40d5-8af2-69e0f6e6d1b2",
+											"fieldType": "sap.m.Text",
+											"script": "",
+											"request": [],
+											"response": [],
+											"attributes": [],
+											"data": []
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"fieldNo": 99998,
+			"data": []
+		}
+	],
+	"ver": "22.8.3.939",
+	"application": "paymentrequestdemo",
+	"title": "Payment Request",
+	"description": "",
+	"enableFileStorage": false,
+	"enableManifest": false,
+	"enableStylesheet": true,
+	"enableObfuscate": false,
+	"onlyRunLaunchpad": false,
+	"disabled": false,
+	"loadLaunchpadCode": null,
+	"loadApplicationCode": null,
+	"appType": "",
+	"ui5_m": true,
+	"ui5_f": false,
+	"ui5_table": false,
+	"ui5_tnt": false,
+	"ui5_uxap": false,
+	"ui5_chart": false,
+	"ui5_theme": "sap_fiori_3",
+	"ui5_version": "",
+	"ui5_language": null,
+	"cus_theme": "",
+	"css": [
+		"==OBJECT STRING==",
+		".gpay-button.black.short, .gpay-button.black.plain {\r",
+		"    background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);\r",
+		"}\r",
+		"\r",
+		".gpay-button.short, .gpay-button.plain {\r",
+		"    min-width: 90px;\r",
+		"    width: 160px;\r",
+		"}\r",
+		"\r",
+		".gpay-button.black {\r",
+		"    background-color: #000;\r",
+		"    box-shadow: none;\r",
+		"    padding: 12px 24px 10px;\r",
+		"}\r",
+		"\r",
+		".gpay-button{\r",
+		"    background-origin: content-box;\r",
+		"    background-position: center center;\r",
+		"    background-repeat: no-repeat;\r",
+		"    background-size: contain;\r",
+		"    border: 0px;\r",
+		"    border-radius: 4px;\r",
+		"    box-shadow: rgb(60 64 67 / 30%) 0px 1px 1px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;\r",
+		"    cursor: pointer;\r",
+		"    height: 20px;\r",
+		"    min-height: 20px;\r",
+		"    width: 240px;\r",
+		"    background-image: url(https://www.gstatic.com/instantbuy/svg/dark_gpay.svg);\r",
+		"    background-repeat: no-repeat;\r",
+		"    font: 400 13.3333px Arial;\r",
+		"}\r",
+		""
+	],
+	"header": "",
+	"manifest": "",
+	"globalScript": "",
+	"deleted": false,
+	"libHighchart": false,
+	"libHighmap": false,
+	"publicAccess": false,
+	"ui5_bootstrap": false,
+	"apis": []
+}
